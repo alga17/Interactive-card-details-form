@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная форма для ввода данных карты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+ rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <div class="cards">
+
+            <div class="card-front">
+                <img src="images/card-logo.svg" alt="card-logo">
+                <span class="number-card">0000 0000 0000 0000</span>
+                <div class="user-block">
+                    <span class="username">JANE APPLESED</span>
+                    <span class="exp-date">00/00</span>
+                </div>
+            </div>
+
+            <div class="card-back">
+                <span class="cvc-span">000</span>
+            </div>
+
+        </div>
+
+        <div class="input-block">
+            <span>CARDHOLDER NAME</span>
+            <input type="text" placeholder="e.g. Jane Applesed" class="input cardholder-name">
+            <span class="error">Wrong format, text only</span>
+            <span>CARD NUMBER</span>
+            <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="input card-number">
+            <span class="error">Enter the full number</span>
+
+            <div class="exp-date-block">
+                <div class="date-card">
+                    <span>EXP. DATE (MM/YY)</span>
+                    <div class="data-input-block">
+                        <input type="text" placeholder="MM" class="input data-card-mm" maxlength="2">
+                        <input type="text" placeholder="YY" class="input data-card-yy" maxlength="2">
+                    </div>
+                    <span class="error">Incorrect date</span>
+                </div>
+
+                <div class="cvc-block">
+                    <span>CVC</span>
+                    <input type="text" placeholder="e.g. 123" class="input cvc" maxlength="3">
+                    <span class="error">Can`t be blank</span>
+                </div>
+            </div>
+
+            <button type="button" class="confirm">Confirm</button>
+
+        </div>
+
+        <div class="result-block">
+            <img src="images/icon-complete.svg" alt="icon-complete">
+            <h3>THANK YOU!</h3>
+            <span>We`ve added your card details</span>
+            <button type="button" class="continue">Continue</button>
+
+        </div>
+
+    </main>
+    <script src="script.js"></script> 
+</body>
+</html>

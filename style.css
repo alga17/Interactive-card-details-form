@@ -1,0 +1,252 @@
+:root {
+--Gray-200: hsl(270, 3%, 87%);
+--Gray-400: hsl(212, 12%, 71%);
+--Purple-950: hsl(278, 68%, 11%);
+--Red-400: hsl(0, 100%, 66%);
+
+--Light-Gradient: linear-gradient(45deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+};
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-image: url('images/bg-main-desktop.png');
+    background-size: 40% 100%;
+    background-position: left center; 
+    background-repeat: no-repeat; 
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+}
+
+input, button {
+   font-family: "Space Grotesk", sans-serif; 
+}
+
+main {
+    display: flex;
+    align-items: center;
+    gap: 125px;
+}
+
+.card-front {
+    box-sizing: border-box;
+    height: 245px;
+    width: 447px;
+    background-image: url(images/bg-card-front.png);
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.2em;
+
+}
+
+.card-front > img {
+    height: auto;
+    width: 84px;
+}
+
+.number-card {
+    font-size: 29px;
+    margin: 70px auto 0 auto;
+    color: white;
+}
+
+.card-back {
+    display: flex;
+    height: 245px;
+    width: 447px;
+    background-image: url(images/bg-card-back.png);
+    margin-left: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    min-height: 350px;
+    padding: 10px;
+}
+
+.result-block {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 380px;
+    min-height: 350px;
+    padding: 10px;
+}
+
+.result-block > img {
+    width: 80px;
+}
+
+.result-block > span {
+    color: var(--Gray-400);
+}
+
+h3 { 
+    font-size: 25px;
+    letter-spacing: 0.2em;
+    color: var(--Purple-950);
+}
+
+.input-block > span, .date-card > span, .cvc-block > span {
+    letter-spacing: 0.1em;
+    font-size: 14px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.user-block {
+    display: flex;
+    justify-content: space-between;
+    color: var(--Gray-200);
+    margin-top: auto;
+}
+
+.cvc-span {
+    margin: 0 0 3px 300px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+input{
+    padding-left: 20px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--Gray-200);
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px 0 20px 0;
+}
+
+input:focus {
+    border: 2px solid var(--Purple-950);
+    outline: none;
+}
+
+.input::placeholder {
+    font-size: 18px;
+    color: var(--Gray-400);
+    font-weight: 500;
+}
+
+.exp-date-block {
+    display: flex;
+    gap: 20px;
+}
+
+.date-card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.data-input-block {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.data-card-mm, .data-card-yy {
+    width: 50%;
+}
+
+.cvc-block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px 0;
+    border: 3px solid transparent;
+    background-color: var(--Purple-950);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.continue {
+    margin-top: 30px;
+    width: 100%;
+}
+
+button:hover {
+    border-color: var(--Purple-950);
+    color: var(--Purple-950);
+    background-color: white;
+    font-weight: 500;
+}
+
+.error {
+    color: var(--Red-400);
+    margin-bottom: 20px;
+    margin-top: -10px;
+    display: none;
+}
+
+@media (max-width: 58.25rem) {
+
+    body {
+        background-position: top center;
+        background-size: 100% 30%;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .card-back {
+        position: absolute;
+        z-index: 1;
+        margin: -150px 0 0 80px;
+    }
+
+    .card-front {
+        position: relative;
+        z-index: 2;
+        
+    }
+    
+    .cards {
+        flex-direction: row;
+        gap: 0;
+
+    }
+
+    .input-block, .result-block {
+        width: 70%;
+    }
+
+}
+
+
+
