@@ -237,6 +237,7 @@ button:hover {
     }
     
     .cards {
+        margin-top: 25px;
         flex-direction: row;
         gap: 0;
 
